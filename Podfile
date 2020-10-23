@@ -9,6 +9,7 @@ target 'ListNBuyVender' do
   pod 'IQKeyboardManagerSwift'
   pod 'LPSnackbar'
   pod 'SVProgressHUD'
+  pod 'SwipeMenuViewController'
   # Pods for ListNBuyVender
 
 end

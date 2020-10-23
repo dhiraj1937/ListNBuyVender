@@ -4,6 +4,7 @@ PODS:
   - LPSnackbar (3.1.0)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
+  - SwipeMenuViewController (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - LPSnackbar
   - SVProgressHUD
   - SwiftyJSON
+  - SwipeMenuViewController
 
 SPEC REPOS:
   trunk:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - LPSnackbar
     - SVProgressHUD
     - SwiftyJSON
+    - SwipeMenuViewController
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   LPSnackbar: 27311158a371484d51fa5eace8bbe7a08eaddcfa
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwipeMenuViewController: 94fac81cc192d9f08f218fe4c0c853569b735e1f
 
-PODFILE CHECKSUM: ca35f4930b2ce2e603e4ccf6e63a593c7db8dcee
+PODFILE CHECKSUM: 9a9c58facdab311cc902ebaa8dae8ad3a228e470
 
 COCOAPODS: 1.9.1

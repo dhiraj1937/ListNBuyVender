@@ -12,18 +12,27 @@ class SwipeOrdersViewController: SwipeMenuViewController {
 
     private var tabs: [String] = ["TODAY","DONE", "UPCOMING", "FAILD"]
     var options = SwipeMenuViewOptions()
-    var dataCount: Int = 4
+    
+    var dataCount: Int = 0
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
         tabs.forEach { data in
-            let vc = SettingViewController()
+            let vc = OrderListViewController()
             vc.title = data
             self.addChild(vc)
         }
-        super.viewDidLoad()
+        dataCount=4;
+        reload();
         // Do any additional setup after loading the view.
     }
     
     private func reload() {
+        options.tabView.style = .segmented
+        options.tabView.backgroundColor = UIColor.init(red: 172/255, green: 78/255, blue: 230/255, alpha: 1)
+        options.tabView.itemView.textColor = UIColor.white;
+        options.tabView.itemView.selectedTextColor = UIColor.white;
+        options.tabView.additionView.backgroundColor = UIColor.red
         swipeMenuView.reloadData(options: options)
     }
 
