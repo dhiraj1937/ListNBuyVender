@@ -131,6 +131,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRu-Sa-zWf">
                                                 <rect key="frame" x="0.0" y="-2" width="149" height="114"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <connections>
+                                                    <segue destination="TOa-AJ-RSc" kind="show" id="Zb1-UO-7FG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -373,6 +376,37 @@
             </objects>
             <point key="canvasLocation" x="2421.5999999999999" y="56.221889055472268"/>
         </scene>
+        <!--Swipe Orders View Controller-->
+        <scene sceneID="Apg-Bw-uyA">
+            <objects>
+                <viewController storyboardIdentifier="SwipeOrdersViewController" id="TOa-AJ-RSc" customClass="SwipeOrdersViewController" customModule="ListNBuyVender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RCT-dG-Xbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vbt-Ej-B4s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C2O-Hm-5ta"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9F-D5-cod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="716"/>
+        </scene>
+        <!--Order List View Controller-->
+        <scene sceneID="spq-WS-7qb">
+            <objects>
+                <viewController storyboardIdentifier="OrderListViewController" id="Rm3-Tq-4qL" customClass="OrderListViewController" customModule="ListNBuyVender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWN-K1-CfV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yhA-WQ-IBr"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJL-4K-IVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615" y="646"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Availability" width="176" height="176"/>
@@ -383,6 +417,9 @@
         <image name="user_bg" width="1080" height="1923"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

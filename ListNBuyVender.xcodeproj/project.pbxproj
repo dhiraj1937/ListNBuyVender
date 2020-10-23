@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		181B03702540BF9A008EBAA2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B036F2540BF9A008EBAA2 /* BaseViewController.swift */; };
 		181B03732540C071008EBAA2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181B03722540C071008EBAA2 /* SettingViewController.swift */; };
+		1827D98D2543054C00D21258 /* SwipeOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827D98C2543054C00D21258 /* SwipeOrdersViewController.swift */; };
+		1827D9912543084700D21258 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827D9902543084700D21258 /* OrderListViewController.swift */; };
 		182FD51725420972003418AF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FD51625420972003418AF /* ApiManager.swift */; };
 		18ECA994254029AA00D3DF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA993254029AA00D3DF56 /* AppDelegate.swift */; };
 		18ECA996254029AA00D3DF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA995254029AA00D3DF56 /* SceneDelegate.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		181B036F2540BF9A008EBAA2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		181B03722540C071008EBAA2 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1827D98C2543054C00D21258 /* SwipeOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeOrdersViewController.swift; sourceTree = "<group>"; };
+		1827D9902543084700D21258 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		182FD51625420972003418AF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		18ECA990254029AA00D3DF56 /* ListNBuyVender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListNBuyVender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ECA993254029AA00D3DF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				18ECA9A92540382E00D3DF56 /* HomeViewController.swift */,
 				181B036F2540BF9A008EBAA2 /* BaseViewController.swift */,
 				181B03722540C071008EBAA2 /* SettingViewController.swift */,
+				1827D98C2543054C00D21258 /* SwipeOrdersViewController.swift */,
+				1827D9902543084700D21258 /* OrderListViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 				18ECA998254029AA00D3DF56 /* ViewController.swift in Sources */,
 				182FD51725420972003418AF /* ApiManager.swift in Sources */,
 				18ECA9AA2540382E00D3DF56 /* HomeViewController.swift in Sources */,
+				1827D9912543084700D21258 /* OrderListViewController.swift in Sources */,
 				18ECA9AF25406ABB00D3DF56 /* Constant.swift in Sources */,
 				181B03732540C071008EBAA2 /* SettingViewController.swift in Sources */,
+				1827D98D2543054C00D21258 /* SwipeOrdersViewController.swift in Sources */,
 				18ECA994254029AA00D3DF56 /* AppDelegate.swift in Sources */,
 				18ECA996254029AA00D3DF56 /* SceneDelegate.swift in Sources */,
 				181B03702540BF9A008EBAA2 /* BaseViewController.swift in Sources */,
