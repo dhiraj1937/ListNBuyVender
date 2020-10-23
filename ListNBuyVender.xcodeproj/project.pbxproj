@@ -13,7 +13,6 @@
 		1827D9912543084700D21258 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827D9902543084700D21258 /* OrderListViewController.swift */; };
 		182FD51725420972003418AF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FD51625420972003418AF /* ApiManager.swift */; };
 		18ECA994254029AA00D3DF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA993254029AA00D3DF56 /* AppDelegate.swift */; };
-		18ECA996254029AA00D3DF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA995254029AA00D3DF56 /* SceneDelegate.swift */; };
 		18ECA998254029AA00D3DF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA997254029AA00D3DF56 /* ViewController.swift */; };
 		18ECA99B254029AA00D3DF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ECA999254029AA00D3DF56 /* Main.storyboard */; };
 		18ECA99D254029AC00D3DF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18ECA99C254029AC00D3DF56 /* Assets.xcassets */; };
@@ -22,6 +21,10 @@
 		18ECA9AF25406ABB00D3DF56 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA9AE25406ABB00D3DF56 /* Constant.swift */; };
 		18ECA9B325406AD900D3DF56 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA9B225406AD900D3DF56 /* Helper.swift */; };
 		9918F556F5A1C9916871E723 /* Pods_ListNBuyVender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB8EE45E5C2AB7B2EBA1C0B /* Pods_ListNBuyVender.framework */; };
+		C37E852025429A6500F8B695 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E851E25429A6500F8B695 /* LoginViewController.swift */; };
+		C37E852125429A6500F8B695 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E851F25429A6500F8B695 /* ProfileViewController.swift */; };
+		C37E85232543097300F8B695 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E85222543097300F8B695 /* Alert.swift */; };
+		C37E85252543210E00F8B695 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E85242543210E00F8B695 /* ResetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +35,6 @@
 		182FD51625420972003418AF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		18ECA990254029AA00D3DF56 /* ListNBuyVender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListNBuyVender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ECA993254029AA00D3DF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18ECA995254029AA00D3DF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18ECA997254029AA00D3DF56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		18ECA99A254029AA00D3DF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18ECA99C254029AC00D3DF56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +45,10 @@
 		18ECA9B225406AD900D3DF56 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		300CE0AB740AD5A6B68BD8A4 /* Pods-ListNBuyVender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListNBuyVender.debug.xcconfig"; path = "Target Support Files/Pods-ListNBuyVender/Pods-ListNBuyVender.debug.xcconfig"; sourceTree = "<group>"; };
 		4DB8EE45E5C2AB7B2EBA1C0B /* Pods_ListNBuyVender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListNBuyVender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37E851E25429A6500F8B695 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C37E851F25429A6500F8B695 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C37E85222543097300F8B695 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C37E85242543210E00F8B695 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		FECA924A2C62820F09D85377 /* Pods-ListNBuyVender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListNBuyVender.release.xcconfig"; path = "Target Support Files/Pods-ListNBuyVender/Pods-ListNBuyVender.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +97,6 @@
 				18ECA9AD25406AA300D3DF56 /* Helper */,
 				18ECA9A8254037F400D3DF56 /* Views */,
 				18ECA993254029AA00D3DF56 /* AppDelegate.swift */,
-				18ECA995254029AA00D3DF56 /* SceneDelegate.swift */,
 				18ECA997254029AA00D3DF56 /* ViewController.swift */,
 				18ECA999254029AA00D3DF56 /* Main.storyboard */,
 				18ECA99C254029AC00D3DF56 /* Assets.xcassets */,
@@ -104,6 +109,9 @@
 		18ECA9A8254037F400D3DF56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C37E851E25429A6500F8B695 /* LoginViewController.swift */,
+				C37E851F25429A6500F8B695 /* ProfileViewController.swift */,
+				C37E85242543210E00F8B695 /* ResetPasswordViewController.swift */,
 				18ECA9A92540382E00D3DF56 /* HomeViewController.swift */,
 				181B036F2540BF9A008EBAA2 /* BaseViewController.swift */,
 				181B03722540C071008EBAA2 /* SettingViewController.swift */,
@@ -116,6 +124,7 @@
 		18ECA9AD25406AA300D3DF56 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				C37E85222543097300F8B695 /* Alert.swift */,
 				18ECA9AE25406ABB00D3DF56 /* Constant.swift */,
 				18ECA9B225406AD900D3DF56 /* Helper.swift */,
 			);
@@ -261,8 +270,11 @@
 				181B03732540C071008EBAA2 /* SettingViewController.swift in Sources */,
 				1827D98D2543054C00D21258 /* SwipeOrdersViewController.swift in Sources */,
 				18ECA994254029AA00D3DF56 /* AppDelegate.swift in Sources */,
-				18ECA996254029AA00D3DF56 /* SceneDelegate.swift in Sources */,
+				C37E85232543097300F8B695 /* Alert.swift in Sources */,
+				C37E852125429A6500F8B695 /* ProfileViewController.swift in Sources */,
+				C37E85252543210E00F8B695 /* ResetPasswordViewController.swift in Sources */,
 				181B03702540BF9A008EBAA2 /* BaseViewController.swift in Sources */,
+				C37E852025429A6500F8B695 /* LoginViewController.swift in Sources */,
 				18ECA9B325406AD900D3DF56 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Q6BLC976V;
 				INFOPLIST_FILE = ListNBuyVender/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Q6BLC976V;
 				INFOPLIST_FILE = ListNBuyVender/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,4 +14,11 @@ class SettingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+     @IBAction func btnLogoutAction(_ sender: Any) {
+        Constant.defaults.set("", forKey: "loginData")
+        Constant.defaults.set(false, forKey: "loggedIn")
+        Constant.defaults.synchronize()
+        self.navigationController?.popToRootViewController(animated: true);
+    }
+    
 }

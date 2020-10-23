@@ -7,9 +7,21 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
+
 public class Helper {
     
-    
+    //MARK:- Show loader
+       class func showLoader() {
+           SVProgressHUD.setDefaultStyle(.custom)
+           SVProgressHUD.setDefaultMaskType(.custom)
+           SVProgressHUD.setForegroundColor(UIColor.red)           //Ring Color
+           SVProgressHUD.show(withStatus: "Please wait...")
+       }
+       
+       class func stopLoader() {
+           SVProgressHUD.dismiss()
+       }
     
 }
 
@@ -137,9 +149,6 @@ extension UIViewController : UITextFieldDelegate,UITextViewDelegate{
         self.navigationController?.popViewController(animated: true);
     }
     
-    @IBAction func btnLogout_Click(){
-        self.navigationController?.popToRootViewController(animated: true);
-    }
     
     public func SetStatusBarColor(color:UIColor=UIColor.init(red: 249/255, green: 178/255, blue: 18/255, alpha: 1)){
         //UIApplication.shared.statusBarUIView?.backgroundColor = color
@@ -163,4 +172,80 @@ extension UIViewController : UITextFieldDelegate,UITextViewDelegate{
 }
 
 
+class RJBorderedButton: UIButton {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = 21
+        self.clipsToBounds = true
+    }
+}
+
+
+class RJBorderedTF: UITextField {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+       self.layer.cornerRadius = 21
+       self.dropShadow(scale: true)
+       // self.layer.borderWidth = 0.5
+       // self.clipsToBounds = true
+    }
+    
+    let padding = UIEdgeInsets(top: 0, left: 10 , bottom: 0, right: 40)
+    
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+}
+
+
+class RJShadowView:UIView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.dropShadow(scale: true)
+        self.layer.cornerRadius = 15
+    }
+}
+//MARK:UIView Extension
+extension UIView {
+func dropShadow(scale: Bool = true) {
+      layer.masksToBounds = false
+      layer.shadowOpacity = 0.5
+      layer.shadowOffset = CGSize(width: 2, height: 2)
+      layer.shadowRadius = 4
+  }
+}
+
+
+extension UIImageView {
+    
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
+}
 

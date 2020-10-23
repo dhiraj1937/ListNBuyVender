@@ -6,7 +6,9 @@ target 'ListNBuyVender' do
   use_frameworks!
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON'
-  pod 'SwipeMenuViewController'
+  pod 'IQKeyboardManagerSwift'
+  pod 'LPSnackbar'
+  pod 'SVProgressHUD'
   # Pods for ListNBuyVender
 
 end
