@@ -18,7 +18,7 @@ class SwipeOrdersViewController: SwipeMenuViewController {
         
         super.viewDidLoad()
         tabs.forEach { data in
-            let vc = OrderListViewController()
+            let vc = Constant.StoryBoard.instantiateViewController(withIdentifier: "OrderListViewController") as! OrderListViewController
             vc.title = data
             self.addChild(vc)
         }
@@ -32,8 +32,10 @@ class SwipeOrdersViewController: SwipeMenuViewController {
         options.tabView.backgroundColor = UIColor.init(red: 172/255, green: 78/255, blue: 230/255, alpha: 1)
         options.tabView.itemView.textColor = UIColor.white;
         options.tabView.itemView.selectedTextColor = UIColor.white;
-        options.tabView.additionView.backgroundColor = UIColor.red
+        options.tabView.additionView.backgroundColor = UIColor.systemOrange
         swipeMenuView.reloadData(options: options)
+        let vc = children[0] as! OrderListViewController
+        vc.GetOrders(status: 0)
     }
 
     // MARK: - SwipeMenuViewDelegate
@@ -51,6 +53,9 @@ class SwipeOrdersViewController: SwipeMenuViewController {
     override func swipeMenuView(_ swipeMenuView: SwipeMenuView, willChangeIndexFrom fromIndex: Int, to toIndex: Int) {
         super.swipeMenuView(swipeMenuView, willChangeIndexFrom: fromIndex, to: toIndex)
         print("will change from section\(fromIndex + 1)  to section\(toIndex + 1)")
+        let vc = children[toIndex] as! OrderListViewController
+        vc.GetOrders(status: toIndex)
+        Constant.selectedTab = toIndex;
     }
 
     override func swipeMenuView(_ swipeMenuView: SwipeMenuView, didChangeIndexFrom fromIndex: Int, to toIndex: Int) {

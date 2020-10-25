@@ -70,12 +70,14 @@ class LoginViewController: UIViewController {
                 print(phone)
                 
                 let strImage = JSON["ResponseData"][0]["Image"].stringValue
+                let userId = JSON["ResponseData"][0]["Id"].stringValue
                 print(strImage)
                 
                 AppUserDefaults.isLoggedIn = true
                 AppUserDefaults.userName = name
                 AppUserDefaults.userMobile = phone
                 AppUserDefaults.userImg = strImage
+                AppUserDefaults.userId = userId
                 Constant.defaults.synchronize()
                 
                 DispatchQueue.main.async {

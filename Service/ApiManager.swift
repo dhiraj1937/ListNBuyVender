@@ -27,7 +27,6 @@ class ApiManager: NSObject {
             switch response.result {
             case let .success(result):
                 success(JSON(result))
-                
             case let .failure(error):
                 failure(error)
             }

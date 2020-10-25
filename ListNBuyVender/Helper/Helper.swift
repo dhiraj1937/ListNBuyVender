@@ -15,7 +15,7 @@ public class Helper {
        class func showLoader() {
            SVProgressHUD.setDefaultStyle(.custom)
            SVProgressHUD.setDefaultMaskType(.custom)
-           SVProgressHUD.setForegroundColor(UIColor.red)           //Ring Color
+           SVProgressHUD.setForegroundColor(UIColor.orange)           //Ring Color
            SVProgressHUD.show(withStatus: "Please wait...")
        }
        
@@ -33,7 +33,7 @@ open class VariableCornerRadiusView: UIView  {
         let shape = CAShapeLayer()
         shape.path = path.cgPath
         layer.mask = shape
-        
+        layer.masksToBounds = false
     }
 
     @IBInspectable
@@ -66,17 +66,28 @@ open class VariableCornerRadiusView: UIView  {
 
             didSet(newValue) {
                 if(newValue == true){
-                    //self.layer.masksToBounds = true
-//                    self.layer.shadowColor = UIColor.gray.cgColor
-//                    self.layer.shadowOpacity = 1
-//                    self.layer.shadowOffset = CGSize(width: 2, height: 3)
-//                    self.layer.shadowRadius = 3
-//
-//                    self.layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-//                    self.layer.shouldRasterize = true
-//                    self.layer.rasterizationScale =  UIScreen.main.scale
-//                    print("trying to use shadow")
+                    self.layer.masksToBounds = false
+                    self.layer.shadowColor = UIColor.gray.cgColor
+                    self.layer.shadowOpacity = 1
+                    self.layer.shadowOffset = .zero//CGSize(width: 0, height: 5)
+                    self.layer.shadowRadius = 10
+
+                    self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+                    self.layer.shouldRasterize = true
+                    self.layer.rasterizationScale =  UIScreen.main.scale
+                    print("trying to use shadow")
                 }
+            }
+
+        }
+}
+
+
+@IBDesignable open class CornerRadiusView:UIView{
+    @IBInspectable var radius:CGFloat = 0{
+
+            didSet(newValue) {
+                self.layer.cornerRadius = radius;
             }
 
         }
@@ -141,6 +152,45 @@ extension UIBezierPath {
     
     
    
+}
+
+@IBDesignable extension UIView {
+
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+            
+            self.clipsToBounds = true
+            self.layer.masksToBounds = false
+            self.layer.shadowRadius = 2
+            self.layer.shadowOpacity = 0.6
+            self.layer.shadowOffset = CGSize(width: 0, height: 2)
+            self.layer.shadowColor = UIColor.gray.cgColor
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
 }
 
 extension UIViewController : UITextFieldDelegate,UITextViewDelegate{

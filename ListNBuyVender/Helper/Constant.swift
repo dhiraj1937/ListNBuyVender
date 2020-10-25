@@ -16,13 +16,18 @@ public class Constant {
     //All storyboard
     let Kwidth  = UIScreen.main.bounds.size.width
     let Kheight = UIScreen.main.bounds.size.height
-    
+    public static let StoryBoard = UIStoryboard(name: "Main", bundle: nil)
     public static let defaults = UserDefaults.standard
+    public static var selectedTab:Int = 0;
     
     public static var APIKey:String = "123456789123456789"
     private static var serverURL:String = "https://projects.seawindsolution.com/YOGDEV/360/Webservices"
     //private static var serverURL:String = "https://www.podahmedabad.com/Webservices"
     public static var loginUrl:String = Constant.serverURL+"/deliveryBoyLogin";
+    public static var getTodayOrderURL:String = Constant.serverURL+"/getTodayOrderByDeliveryBoyId";
+    public static var getDONEOrderURL:String = Constant.serverURL+"/getDeliveredOrderByDeliveryBoyId";
+    public static var getUpComingOrderURL:String = Constant.serverURL+"/getUpcommingOrderByDeliveryBoyId";
+    public static var getFailedOrderURL:String = Constant.serverURL+"/getOrderProductsByOrderId";
 }
 
 
@@ -64,5 +69,12 @@ class AppUserDefaults {
         }
     }
     
-    
+    static var userId:String?{
+        set{
+            UserDefaults.standard.set(newValue, forKey: "userId")
+        }
+        get{
+            return UserDefaults.standard.value(forKey: "userId") as? String
+        }
+    }
 }

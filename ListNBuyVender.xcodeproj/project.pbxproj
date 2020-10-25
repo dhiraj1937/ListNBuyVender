@@ -12,6 +12,9 @@
 		1827D98D2543054C00D21258 /* SwipeOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827D98C2543054C00D21258 /* SwipeOrdersViewController.swift */; };
 		1827D9912543084700D21258 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827D9902543084700D21258 /* OrderListViewController.swift */; };
 		182FD51725420972003418AF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FD51625420972003418AF /* ApiManager.swift */; };
+		184A6AEF254493CE004CBD04 /* TodayOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184A6AEE254493CE004CBD04 /* TodayOrderTableViewCell.swift */; };
+		185BA6512545FA770002F915 /* OrderDoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BA6502545FA770002F915 /* OrderDoneTableViewCell.swift */; };
+		185BA6542545FE190002F915 /* UpcomingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BA6532545FE190002F915 /* UpcomingOrderTableViewCell.swift */; };
 		18ECA994254029AA00D3DF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA993254029AA00D3DF56 /* AppDelegate.swift */; };
 		18ECA998254029AA00D3DF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ECA997254029AA00D3DF56 /* ViewController.swift */; };
 		18ECA99B254029AA00D3DF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ECA999254029AA00D3DF56 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 		1827D98C2543054C00D21258 /* SwipeOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeOrdersViewController.swift; sourceTree = "<group>"; };
 		1827D9902543084700D21258 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		182FD51625420972003418AF /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		184A6AEE254493CE004CBD04 /* TodayOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayOrderTableViewCell.swift; sourceTree = "<group>"; };
+		185BA6502545FA770002F915 /* OrderDoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDoneTableViewCell.swift; sourceTree = "<group>"; };
+		185BA6532545FE190002F915 /* UpcomingOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingOrderTableViewCell.swift; sourceTree = "<group>"; };
 		18ECA990254029AA00D3DF56 /* ListNBuyVender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListNBuyVender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ECA993254029AA00D3DF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18ECA997254029AA00D3DF56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,16 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		184A6AED254492DE004CBD04 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				184A6AEE254493CE004CBD04 /* TodayOrderTableViewCell.swift */,
+				185BA6502545FA770002F915 /* OrderDoneTableViewCell.swift */,
+				185BA6532545FE190002F915 /* UpcomingOrderTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		18ECA987254029AA00D3DF56 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +110,7 @@
 		18ECA992254029AA00D3DF56 /* ListNBuyVender */ = {
 			isa = PBXGroup;
 			children = (
+				184A6AED254492DE004CBD04 /* CustomCell */,
 				18ECA9AD25406AA300D3DF56 /* Helper */,
 				18ECA9A8254037F400D3DF56 /* Views */,
 				18ECA993254029AA00D3DF56 /* AppDelegate.swift */,
@@ -265,6 +282,7 @@
 				18ECA998254029AA00D3DF56 /* ViewController.swift in Sources */,
 				182FD51725420972003418AF /* ApiManager.swift in Sources */,
 				18ECA9AA2540382E00D3DF56 /* HomeViewController.swift in Sources */,
+				184A6AEF254493CE004CBD04 /* TodayOrderTableViewCell.swift in Sources */,
 				1827D9912543084700D21258 /* OrderListViewController.swift in Sources */,
 				18ECA9AF25406ABB00D3DF56 /* Constant.swift in Sources */,
 				181B03732540C071008EBAA2 /* SettingViewController.swift in Sources */,
@@ -273,9 +291,11 @@
 				C37E85232543097300F8B695 /* Alert.swift in Sources */,
 				C37E852125429A6500F8B695 /* ProfileViewController.swift in Sources */,
 				C37E85252543210E00F8B695 /* ResetPasswordViewController.swift in Sources */,
+				185BA6512545FA770002F915 /* OrderDoneTableViewCell.swift in Sources */,
 				181B03702540BF9A008EBAA2 /* BaseViewController.swift in Sources */,
 				C37E852025429A6500F8B695 /* LoginViewController.swift in Sources */,
 				18ECA9B325406AD900D3DF56 /* Helper.swift in Sources */,
+				185BA6542545FE190002F915 /* UpcomingOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
