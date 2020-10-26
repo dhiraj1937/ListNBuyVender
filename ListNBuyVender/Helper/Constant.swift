@@ -31,6 +31,9 @@ public class Constant {
     public static var getFailedOrderURL:String = Constant.serverURL+"/getOrderProductsByOrderId";
     public static var getPagesURL:String = Constant.serverURL+"/getPages_db";
     public static var changeDeliveryStatusURL:String = Constant.serverURL+"/changeDeliveryStatus";
+    public static var getAvailibilityURL:String = Constant.serverURL+"/getAvailibility";
+    public static var addAvailibilityURL:String = Constant.serverURL+"/addAvailibility";
+    public static var getPages_dbURL:String = Constant.serverURL+"/getPages_db";
 }
 
 

@@ -32,4 +32,5 @@ struct AlertMsg {
     
     static let enterConfirmPassword = "Please enter confirm password."
     static let passwordNotMatching = "Confirm password does not match."
+    static let AvilibilitySuccess = "Avilibility Added Successfully !"
 }

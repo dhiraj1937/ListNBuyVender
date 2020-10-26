@@ -30,6 +30,10 @@
 		C37E852125429A6500F8B695 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E851F25429A6500F8B695 /* ProfileViewController.swift */; };
 		C37E85232543097300F8B695 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E85222543097300F8B695 /* Alert.swift */; };
 		C37E85252543210E00F8B695 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37E85242543210E00F8B695 /* ResetPasswordViewController.swift */; };
+		C388941E2547499400508B5E /* AvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388941D2547499400508B5E /* AvailabilityViewController.swift */; };
+		C3889420254749AB00508B5E /* AvailabilityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388941F254749AB00508B5E /* AvailabilityCell.swift */; };
+		C3889422254749BE00508B5E /* MyWKWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3889421254749BE00508B5E /* MyWKWebViewVC.swift */; };
+		C3889424254750A700508B5E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3889423254750A700508B5E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		C37E851F25429A6500F8B695 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C37E85222543097300F8B695 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C37E85242543210E00F8B695 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		C388941D2547499400508B5E /* AvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityViewController.swift; sourceTree = "<group>"; };
+		C388941F254749AB00508B5E /* AvailabilityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityCell.swift; sourceTree = "<group>"; };
+		C3889421254749BE00508B5E /* MyWKWebViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWKWebViewVC.swift; sourceTree = "<group>"; };
+		C3889423254750A700508B5E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FECA924A2C62820F09D85377 /* Pods-ListNBuyVender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListNBuyVender.release.xcconfig"; path = "Target Support Files/Pods-ListNBuyVender/Pods-ListNBuyVender.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3889424254750A700508B5E /* WebKit.framework in Frameworks */,
 				9918F556F5A1C9916871E723 /* Pods_ListNBuyVender.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,10 +94,11 @@
 		184A6AED254492DE004CBD04 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				C388941F254749AB00508B5E /* AvailabilityCell.swift */,
 				184A6AEE254493CE004CBD04 /* TodayOrderTableViewCell.swift */,
 				185BA6502545FA770002F915 /* OrderDoneTableViewCell.swift */,
-				185BA6532545FE190002F915 /* UpcomingOrderTableViewCell.swift */,
 				18CA5F12254732ED00A6C5E8 /* OrderDetailTableViewCell.swift */,
+				185BA6532545FE190002F915 /* UpcomingOrderTableViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -137,6 +147,8 @@
 				18ECA9A92540382E00D3DF56 /* HomeViewController.swift */,
 				181B036F2540BF9A008EBAA2 /* BaseViewController.swift */,
 				181B03722540C071008EBAA2 /* SettingViewController.swift */,
+				C388941D2547499400508B5E /* AvailabilityViewController.swift */,
+				C3889421254749BE00508B5E /* MyWKWebViewVC.swift */,
 				1827D98C2543054C00D21258 /* SwipeOrdersViewController.swift */,
 				1827D9902543084700D21258 /* OrderListViewController.swift */,
 				18CA5F0F2547280500A6C5E8 /* OrderDetailViewController.swift */,
@@ -166,6 +178,7 @@
 		4C906C480619E98C923336F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3889423254750A700508B5E /* WebKit.framework */,
 				4DB8EE45E5C2AB7B2EBA1C0B /* Pods_ListNBuyVender.framework */,
 			);
 			name = Frameworks;
@@ -294,15 +307,18 @@
 				18ECA9AF25406ABB00D3DF56 /* Constant.swift in Sources */,
 				181B03732540C071008EBAA2 /* SettingViewController.swift in Sources */,
 				1827D98D2543054C00D21258 /* SwipeOrdersViewController.swift in Sources */,
+				C3889420254749AB00508B5E /* AvailabilityCell.swift in Sources */,
 				18ECA994254029AA00D3DF56 /* AppDelegate.swift in Sources */,
 				C37E85232543097300F8B695 /* Alert.swift in Sources */,
 				C37E852125429A6500F8B695 /* ProfileViewController.swift in Sources */,
 				C37E85252543210E00F8B695 /* ResetPasswordViewController.swift in Sources */,
 				18CA5F13254732ED00A6C5E8 /* OrderDetailTableViewCell.swift in Sources */,
 				185BA6512545FA770002F915 /* OrderDoneTableViewCell.swift in Sources */,
+				C3889422254749BE00508B5E /* MyWKWebViewVC.swift in Sources */,
 				181B03702540BF9A008EBAA2 /* BaseViewController.swift in Sources */,
 				C37E852025429A6500F8B695 /* LoginViewController.swift in Sources */,
 				18ECA9B325406AD900D3DF56 /* Helper.swift in Sources */,
+				C388941E2547499400508B5E /* AvailabilityViewController.swift in Sources */,
 				185BA6542545FE190002F915 /* UpcomingOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

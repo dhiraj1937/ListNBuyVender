@@ -75,7 +75,7 @@ class OrderListViewController: UIViewController {
             let msg =  JSON.dictionary?["Message"]?.stringValue
             print(msg as Any)
             if((JSON.dictionary?["IsSuccess"]) != false){
-               GetOrders(status: 0)
+                self.GetOrders(status: 0)
             }
             else{
                 LPSnackbar.showSnack(title: msg!)

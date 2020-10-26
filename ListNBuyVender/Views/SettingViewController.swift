@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import LPSnackbar
 class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -21,4 +22,25 @@ class SettingViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true);
     }
     
+    @IBAction func btnGetHTMLPagesAction(_ sender: UIButton) {
+        if KAPPDELEGATE.isInternetAvailable(){
+            var strForPage = "about-us"
+                   if sender.tag == 111 {
+                      strForPage = "about-us"
+                   }else if sender.tag == 222 {
+                       strForPage = "privacy-policy"
+                   }else if sender.tag == 333 {
+                       strForPage = "terms-and-conditions"
+                   }else{
+                       strForPage = "about-us"
+                   }
+                   DispatchQueue.main.async {
+                       let controller = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyWKWebViewVC") as! MyWKWebViewVC
+                    controller.strForPage = strForPage;
+                       self.show(controller, sender: self)
+                   }
+        }else{
+         LPSnackbar.showSnack(title: AlertMsg.warningToConnectNetwork)
+        }
+    }
 }
