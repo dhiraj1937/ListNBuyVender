@@ -19,6 +19,7 @@ public class Constant {
     public static let StoryBoard = UIStoryboard(name: "Main", bundle: nil)
     public static let defaults = UserDefaults.standard
     public static var selectedTab:Int = 0;
+    static var swipeController:SwipeOrdersViewController?=nil;
     
     public static var APIKey:String = "123456789123456789"
     private static var serverURL:String = "https://projects.seawindsolution.com/YOGDEV/360/Webservices"
@@ -29,6 +30,7 @@ public class Constant {
     public static var getUpComingOrderURL:String = Constant.serverURL+"/getUpcommingOrderByDeliveryBoyId";
     public static var getFailedOrderURL:String = Constant.serverURL+"/getOrderProductsByOrderId";
     public static var getPagesURL:String = Constant.serverURL+"/getPages_db";
+    public static var changeDeliveryStatusURL:String = Constant.serverURL+"/changeDeliveryStatus";
 }
 
 

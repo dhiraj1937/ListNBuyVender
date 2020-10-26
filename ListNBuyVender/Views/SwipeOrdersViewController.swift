@@ -10,13 +10,14 @@ import UIKit
 import SwipeMenuViewController
 class SwipeOrdersViewController: SwipeMenuViewController {
 
-    private var tabs: [String] = ["TODAY","DONE", "UPCOMING", "FAILD"]
+    private var tabs: [String] = ["TODAY","DONE", "UPCOMING", "FAILED"]
     var options = SwipeMenuViewOptions()
     
     var dataCount: Int = 0
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        Constant.swipeController=self;
         self.title = "Orders"
         tabs.forEach { data in
             let vc = Constant.StoryBoard.instantiateViewController(withIdentifier: "OrderListViewController") as! OrderListViewController

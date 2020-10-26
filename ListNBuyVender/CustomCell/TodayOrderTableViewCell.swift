@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import LPSnackbar
 class TodayOrderTableViewCell: UITableViewCell {
     
     @IBOutlet var lblOrderNo:UILabel!
@@ -18,11 +19,17 @@ class TodayOrderTableViewCell: UITableViewCell {
     @IBOutlet var btnStatus:UIButton!
     @IBOutlet var btnCall:UIButton!
     @IBOutlet var btnProducts:UIButton!
+    @IBOutlet var btnPickAdd:UIButton!
+    @IBOutlet var btnShipAdd:UIButton!
+    public var _vc:OrderListViewController?=nil;
+    var _dic:[String:Any]? = nil;
     override class func awakeFromNib() {
         
     }
     
-   public func SetData(dic:[String:Any]){
+    public func SetData(dic:[String:Any],vc:OrderListViewController){
+        _vc=vc;
+        _dic=dic;
         if let OrderNo = dic["orderNo"]{
             lblOrderNo.text = OrderNo as? String
         }
@@ -50,5 +57,18 @@ class TodayOrderTableViewCell: UITableViewCell {
         if let app_status = dic["app_status"]{
             btnStatus.setTitle(app_status as! String,for: UIControl.State.normal)
         }
+    }
+    
+    @IBAction func btnOrderStatus_Click(sender:UIButton){
+        let dicParm :[String:Any] = ["delivery_status": (_dic!["delivery_status"] as! String), "orderId": (_dic!["id"] as! String),"app_status": (_dic!["app_status"] as! String),"deliveryboyId": AppUserDefaults.userId as Any]
+        if KAPPDELEGATE.isInternetAvailable(){
+            _vc?.ChangeDeliveryStatus(dicParam: dicParm);
+        }else{
+            LPSnackbar.showSnack(title: AlertMsg.warningToConnectNetwork)
+        }
+    }
+    
+    @IBAction func btnProductS_Click(sender:UIButton){
+        _vc?.ShowProducs(productArr: _dic!["products"] as! [[String : Any]], vcParent: Constant.swipeController!)
     }
 }

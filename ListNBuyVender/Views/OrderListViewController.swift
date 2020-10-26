@@ -66,6 +66,33 @@ class OrderListViewController: UIViewController {
             }
         
         }
+    
+    public func ChangeDeliveryStatus(dicParam:[String:Any]){
+        DispatchQueue.main.async {
+            Helper.showLoader()
+        }
+        ApiManager.sharedInstance.requestPOSTURL(Constant.changeDeliveryStatusURL, params: dicParam, success: { [self](JSON) in
+            let msg =  JSON.dictionary?["Message"]?.stringValue
+            print(msg as Any)
+            if((JSON.dictionary?["IsSuccess"]) != false){
+               GetOrders(status: 0)
+            }
+            else{
+                LPSnackbar.showSnack(title: msg!)
+            }
+        },failure: { (Error) in
+            DispatchQueue.main.async {
+                Helper.stopLoader()
+            }
+        })
+        
+    }
+    
+    public func ShowProducs(productArr:[[String:Any]],vcParent:SwipeOrdersViewController){
+        let vc = Constant.StoryBoard.instantiateViewController(withIdentifier: "OrderDetailViewController") as! OrderDetailViewController
+        vc.listProducts = productArr;
+        vcParent.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension OrderListViewController : UITableViewDelegate, UITableViewDataSource
@@ -77,7 +104,7 @@ extension OrderListViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(Constant.selectedTab==0){
             let cell = tableView.dequeueReusableCell(withIdentifier: "TodayOrderTableViewCell") as! TodayOrderTableViewCell
-            cell.SetData(dic: listOrders[indexPath.row])
+            cell.SetData(dic: listOrders[indexPath.row], vc: self)
             return cell;
         }
         else if(Constant.selectedTab==1){

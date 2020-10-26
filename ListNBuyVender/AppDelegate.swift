@@ -21,8 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "ic_back")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "ic_back")
         UINavigationBar.appearance().tintColor = UIColor.gray
-        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for:UIBarMetrics.default)
-
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: 0, vertical: -60), for:UIBarMetrics.default)
         return true
     }
 
