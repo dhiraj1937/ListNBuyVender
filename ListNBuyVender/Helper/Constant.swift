@@ -28,6 +28,7 @@ public class Constant {
     public static var getDONEOrderURL:String = Constant.serverURL+"/getDeliveredOrderByDeliveryBoyId";
     public static var getUpComingOrderURL:String = Constant.serverURL+"/getUpcommingOrderByDeliveryBoyId";
     public static var getFailedOrderURL:String = Constant.serverURL+"/getOrderProductsByOrderId";
+    public static var getPagesURL:String = Constant.serverURL+"/getPages_db";
 }
 
 

@@ -17,6 +17,7 @@ class SwipeOrdersViewController: SwipeMenuViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.title = "Orders"
         tabs.forEach { data in
             let vc = Constant.StoryBoard.instantiateViewController(withIdentifier: "OrderListViewController") as! OrderListViewController
             vc.title = data
@@ -25,6 +26,12 @@ class SwipeOrdersViewController: SwipeMenuViewController {
         dataCount=4;
         reload();
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        //Helper.setNavigationBar(vc: self)
     }
     
     private func reload() {

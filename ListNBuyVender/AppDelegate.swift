@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
+        
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "ic_back")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "ic_back")
+        UINavigationBar.appearance().tintColor = UIColor.gray
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for:UIBarMetrics.default)
+
         return true
     }
 

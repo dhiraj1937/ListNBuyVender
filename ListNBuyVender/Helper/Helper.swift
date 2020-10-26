@@ -23,6 +23,18 @@ public class Helper {
            SVProgressHUD.dismiss()
        }
     
+    
+   public static func setNavigationBar(vc:UIViewController) {
+
+        vc.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "ic_back")
+
+        vc.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "ic_back")
+
+    vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    }
+
+    
+    
 }
 
 @IBDesignable
@@ -33,8 +45,27 @@ open class VariableCornerRadiusView: UIView  {
         let shape = CAShapeLayer()
         shape.path = path.cgPath
         layer.mask = shape
-        layer.masksToBounds = false
+        let line = CAShapeLayer()
+               line.path = path.cgPath
+               line.strokeColor = UIColor.white.cgColor
+               line.fillColor = UIColor.clear.cgColor
+            line.lineWidth = 0.5
+               self.layer.addSublayer(line)
+
+               let shadowSubLayer = createShadowLayer()
+               shadowSubLayer.insertSublayer(line, below: shape)
+               self.layer.addSublayer(shadowSubLayer)
     }
+    
+    func createShadowLayer() -> CALayer {
+            let shadowLayer = CALayer()
+            shadowLayer.shadowColor = UIColor.black.cgColor
+            shadowLayer.shadowOffset = CGSize.zero
+            shadowLayer.shadowRadius = 2.0
+            shadowLayer.shadowOpacity = 0.8
+            shadowLayer.backgroundColor = UIColor.clear.cgColor
+            return shadowLayer
+        }
 
     @IBInspectable
     open var topLeftRadius: CGFloat = 0 {
